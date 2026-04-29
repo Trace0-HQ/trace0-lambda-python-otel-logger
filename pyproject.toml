@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "trace0-lambda-otel-logger"
+version = "1.0.0"
+description = "OpenTelemetry-based logger for AWS Lambda Python functions"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Trace0" }]
+keywords = ["opentelemetry", "otel", "lambda", "python", "logging", "observability", "trace0"]
+requires-python = ">=3.11"
+dependencies = [
+    "opentelemetry-api>=1.20.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Trace0-HQ/trace0-lambda-python-otel-logger"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
